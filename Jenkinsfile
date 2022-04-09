@@ -1,12 +1,12 @@
-pipeline {
-    agent any
-
+pipline 
+{
+agent any
     stages {
-        stage('Build') {
+        stage ('SCM Checkout')
+        {
             steps {
-                echo 'Building..'
+                git branch: 'master', url: 'https://github.com/amoldorkhande/maven-project/'
             }
         }
-        
-    }
-}
+     }
+ }
